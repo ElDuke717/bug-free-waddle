@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Crete+Round:ital@0;1&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Crete+Round:ital@0;1&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 
 :root {
   /* Primary */
@@ -83,6 +83,7 @@
 
   /*Interesting colors */
 
+  --gold-brown: #847b69;
   --dark-blue: #0a0f19;
   --indigo-dark: #2c365e;
   --indigo-light: #6574a3;
@@ -95,9 +96,8 @@
 }
 
 .background-gradient {
-    background: linear-gradient(to right, #0a0f19, #2c365e, #642e83, #a364c4);
-  }
-  
+  background: linear-gradient(to right, #0a0f19, #2c365e, #642e83, #a364c4);
+}
 
 body {
   font-family: Arial, sans-serif;
@@ -110,6 +110,10 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  margin: 0;
 }
 
 .header {
@@ -117,6 +121,17 @@ body {
   color: #fff;
   padding: 10px 0;
   text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: row;
+}
+
+.main-title {
+  font-size: 2rem;
+  font-family: "Cinzel", serif;
+  font-weight: 700;
+  color: var(--gold-brown);
 }
 
 nav {
@@ -126,7 +141,7 @@ nav {
 }
 
 nav a {
-  color: white;
+  color: var(--cool-grey-300);
   padding: 14px 20px;
   text-decoration: none;
   text-align: center;
@@ -141,12 +156,24 @@ nav a:hover {
   padding: 20px;
 }
 
+main {
+  flex: 1;
+}
+
+#tarot-intro {
+  color: var(--gold-brown);
+}
+
+.decor-image {
+  width: 50px;
+}
+
 .footer {
   background: #333;
   color: white;
   text-align: center;
   padding: 10px 0;
-  position: relative;
+  position: absolute;
   bottom: 0;
   width: 100%;
 }
